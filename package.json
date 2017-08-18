@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "start": "node build/dev-server.js",
+    "start": "concurrently --kill-others \"npm run server\" \"npm run dev\"",
     "build": "node build/build.js",
     "server": "json-server --no-cors --watch src/api/db.json",
     "server3": "json-server --no-cors --watch src/api/db3.json"
@@ -15,7 +15,8 @@
     "axios": "^0.16.2",
     "vue": "^2.3.3",
     "vue-router": "^2.3.1",
-    "vuex": "^2.3.1"
+    "vuex": "^2.3.1",
+    "concurrently": "^3.5.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -26,7 +27,6 @@
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.22.0",
     "chalk": "^2.0.1",
-    "concurrently": "^3.5.0",
     "connect-history-api-fallback": "^1.3.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
