@@ -7,9 +7,12 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "server": "json-server --no-cors --watch src/api/db.json",
+    "server3": "json-server --no-cors --watch src/api/db3.json"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "vue": "^2.3.3",
     "vue-router": "^2.3.1",
     "vuex": "^2.3.1"
