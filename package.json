@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "start": "concurrently --kill-others \"npm run server\" \"npm run dev\"",
+    "start": "node build/dev-server.js",
     "build": "node build/build.js",
     "server": "json-server --no-cors --watch src/api/db.json",
     "server3": "json-server --no-cors --watch src/api/db3.json"
